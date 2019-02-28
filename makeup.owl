@@ -1,0 +1,1061 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#"
+     xml:base="http://www.semanticweb.org/lokiy/ontologies/makeup.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl">
+        <rdfs:comment xml:lang="en">A makeup ontology that describes makeup products</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <skos:definition xml:lang="en">Sponges specificly used for blending purpose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <skos:definition xml:lang="en">Any hair brush used for applying cosmetics</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <rdfs:comment xml:lang="en">Replacements parts of the tools comes with cosmetics will be listed in Makeup Tools sepereately</rdfs:comment>
+        <skos:altLabel xml:lang="en">Cosmetics products, not including application tools</skos:altLabel>
+        <skos:definition xml:lang="en">cosmetics products, not including tools. Cosmetics comes with tools such as facial pressed powder may comes with sponge inside still counts as cosmetics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
+        <skos:altLabel>Country of Origins</skos:altLabel>
+        <skos:definition>Country of origins which the product was produced, the selection can only be one country.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
+        <skos:definition xml:lang="en">Hair tools used for curling style</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Cosmetic products used for eye area</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Any eyelash curler, regardless of the matrials such as eletronic or plastics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:altLabel xml:lang="en">Not including products for cheek, eye, and lip.</skos:altLabel>
+        <skos:definition xml:lang="en">Cosmetic products used for face area</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Face_Brush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Face_Brush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <skos:definition xml:lang="en">Any other tools used for applying cosmetics for face only that is not belonging to brush, sponges</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Flawless_Finish_Sponges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Flawless_Finish_Sponges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Sponges specificly used for finishing purpose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Full_Coverage_Sponges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Full_Coverage_Sponges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Sponges specificly used for foundation purpose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
+        <skos:definition xml:lang="en">Any hair brush</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
+        <skos:definition xml:lang="en">Hair blowdry tool</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
+        <skos:definition xml:lang="en">Hair tools used for straight style</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <skos:definition xml:lang="en">Any tools used for hairstyle only</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Highlight_Sponges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Highlight_Sponges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Sponges specificly used for highlight purpose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Cosmetic products used for lip area</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lip balm regardless of color, size, texture and it is for repairing and moisturizing purpose</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lip gloss regardless of color, size, texture</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lip liner regardless of color, size, texture</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lip sets regardless of color, size, texture that have at least two products</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lip stain regardless of color, size, texture</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <skos:definition xml:lang="en">Any lipstick regardless of color, size, texture</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <skos:definition xml:lang="en">Empty boxs, bottles used to carry a small amount of cosmetics products</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product"/>
+        <skos:altLabel xml:lang="en">may also known as accessories under makeup</skos:altLabel>
+        <skos:definition xml:lang="en">Application tools for cosmetics, not including cosmetics</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <skos:definition xml:lang="en">Only includes mirrors for makeup purpose, such as portable travel size mirrors or makeup desk mirros only. This does not include dressing mirrors.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
+        <skos:definition xml:lang="en">product category</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Any kind of sponges used for ficial purpose, it includs products of both applying cosmetics and facial cleaning.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Any eyebrow tool, regardless of the matrials such as eletronic or plastics.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Benefits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Benefits"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Diro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Diro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Estte_Lauder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Estte_Lauder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Europe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Europe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Korea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Korea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lancome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lancome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Forever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Forever"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Natural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Natural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Radiant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Radiant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
