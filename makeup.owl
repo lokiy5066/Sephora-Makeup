@@ -71,7 +71,18 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Product"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+        <skos:definition xml:lang="en">Specific which country the product was produced, for the purpose of this project, all makeup tools products are assumed manufactured in UK. For detailed function, see Cosmetics-Face-Fundation-Formular
+
+Note: each product can only has one country of origins. So this is functional.</skos:definition>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Specific which country the product was produced, for the purpose of this project, all makeup tools products are assumed manufactured in UK. For detailed function, see Cosmetics-Face-Fundation-Formular
+
+Note: each product can only has one country of origins. So this is functional.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -81,7 +92,14 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <skos:definition xml:lang="en">Some makeup tools may perform similar funcation and used with the same type of products. For example, face brush and sponge are both used for applying facial makeup such as foundations. So those two products have a relationship of symmetric through related to each other by the same type of property.</skos:definition>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSameFuncationwith"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Some makeup tools may perform similar funcation and used with the same type of products. For example, face brush and sponge are both used for applying facial makeup such as foundations. So those two products have a relationship of symmetric through related to each other by the same type of property.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -91,17 +109,43 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+        <skos:definition xml:lang="en">Products often have formulared for specific skin type, and sometimes it may be suitble for more than one skin type. In addition, each skin type may find mutiple products work on the skin.
+
+For example, Pressed Powder is suitable for oily skin, but oily skin is not always works well with pressed powder.
+
+So those two products have a relationship of Asymmetric. Pressed Powder related to Oily Skin through Suitble Skin Type but Oily Skin is not related to Pressed Powder via the the same type of property.</skos:definition>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Products often have formulared for specific skin type, and sometimes it may be suitble for more than one skin type. In addition, each skin type may find mutiple products work on the skin.
+
+For example, Pressed Powder is suitable for oily skin, but oily skin is not always works well with pressed powder.
+
+So those two products have a relationship of Asymmetric. Pressed Powder related to Oily Skin through Suitble Skin Type but Oily Skin is not related to Pressed Powder via the the same type of property.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFormularOf -->
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFormularOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish"/>
+        <rdfs:comment xml:lang="en">Specific what finish the foudation product was made.
+
+Note: each product can only has one finish. So this is functional.</rdfs:comment>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget xml:lang="en">Specific what finish the foudation product was made.
+
+Note: each product can only has one finish. So this is functional.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -112,7 +156,22 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <skos:definition>Logistic transitive relationship.
+
+Makeup tools is used for applying cosmetics.
+
+Also a inverse of isUsedWith.</skos:definition>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Logistic transitive relationship.
+
+Makeup tools is used for applying cosmetics.
+
+Also a inverse of isUsedWith.</owl:annotatedTarget>
+        <rdfs:isDefinedBy xml:lang="en">http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -123,7 +182,18 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <skos:definition xml:lang="en">Logistic transitive relationship. Also a inverse of isUsedFor.
+
+Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools.</skos:definition>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedWith"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Logistic transitive relationship. Also a inverse of isUsedFor.
+
+Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>http://protegeproject.github.io/protege/views/object-property-characteristics/</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -138,13 +208,46 @@
     
 
 
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BOBBI_BROWN_BB_Cream_SPF_35 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BOBBI_BROWN_BB_Cream_SPF_35">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_Camera_Ready_BB_Cream_SPF_35"/>
+        <skos:definition>A multitasking formula that perfects skin in one easy step—available in a wide shade range for all skin tones, from fair to dark.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BOBBI_BROWN_BB_Cream_SPF_35"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>A multitasking formula that perfects skin in one easy step—available in a wide shade range for all skin tones, from fair to dark.</owl:annotatedTarget>
+        <rdfs:isDefinedBy xml:lang="en">https://www.sephora.com/ca/en/product/bb-cream-broad-spectrum-spf-35-P375910?icid2=products%20grid:p375910:product</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
-        <skos:definition xml:lang="en">Sponges specificly used for blending purpose
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Sponges specificly used for blending purpose</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Sponges specificly used for blending purpose</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -152,18 +255,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
-        <skos:definition xml:lang="en">Any brush used for applying cosmetics
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any brush used for applying cosmetics, hair brush is not include in this lists.</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any brush used for applying cosmetics, hair brush is not include in this lists.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -171,10 +270,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
-        <skos:definition>Concealer that brightens the under-eyes
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>Concealer that brightens the under-eyes</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Concealer that brightens the under-eyes</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -185,10 +288,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
         <rdfs:comment xml:lang="en">Replacements parts of the tools comes with cosmetics will be listed in Makeup Tools sepereately</rdfs:comment>
         <skos:altLabel xml:lang="en">Cosmetics products, not including application tools</skos:altLabel>
-        <skos:definition xml:lang="en">cosmetics products, not including tools. Cosmetics comes with tools such as facial pressed powder may comes with sponge inside still counts as cosmetics.
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">cosmetics products, not including tools. Cosmetics comes with tools such as facial pressed powder may comes with sponge inside still counts as cosmetics.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cosmetics"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">cosmetics products, not including tools. Cosmetics comes with tools such as facial pressed powder may comes with sponge inside still counts as cosmetics.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -206,43 +313,62 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron -->
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dior_Airflash_Spray_Foundation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
-        <skos:definition xml:lang="en">Hair tools used for curling style
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dior_Airflash_Spray_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#France"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ESTÉE_LAUDER_Double_Wear_Stay-in-Place_Foundation"/>
+        <skos:definition xml:lang="en">An ultra-fluid, water-based foundation that blends full coverage with a lightweight formula providing imperceptible second skin for up to 24 hours.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dior_Airflash_Spray_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">An ultra-fluid, water-based foundation that blends full coverage with a lightweight formula providing imperceptible second skin for up to 24 hours.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/diorskin-airflash-spray-foundation-P104914?icid2=products%20grid:p104914:product</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry -->
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ESTÉE_LAUDER_Double_Wear_Stay-in-Place_Foundation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ESTÉE_LAUDER_Double_Wear_Stay-in-Place_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A 24-hour liquid foundation with a flawless, natural, matte finish that unifies uneven skin tone and covers imperfections with buildable coverage.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ESTÉE_LAUDER_Double_Wear_Stay-in-Place_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A 24-hour liquid foundation with a flawless, natural, matte finish that unifies uneven skin tone and covers imperfections with buildable coverage.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/double-wear-stay-in-place-makeup-P378284?icid2=products%20grid:p378284:product</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -256,16 +382,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:definition xml:lang="en">Cosmetic products used for eye area</skos:definition>
-        <skos:definition>Makeup products for eye area
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Cosmetic products used for eye area</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -279,17 +403,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition>brush for eye application
-: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>brush for eye application</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>brush for eye application</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -297,7 +418,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <skos:definition>Eye products in a set that is including at least two or more products.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Eye products in a set that is including at least two or more products.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -305,7 +433,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <skos:definition>Eyebrow products such as eyebrow pencil etc.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Eyebrow products such as eyebrow pencil etc.</owl:annotatedTarget>
+        <rdfs:comment>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -313,15 +448,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isUsedFor"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Any eyelash curler, regardless of the matrials such as eletronic or plastics.
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any eyelash curler, regardless of the matrials such as eletronic or plastics.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any eyelash curler, regardless of the matrials such as eletronic or plastics.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -329,7 +463,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <skos:definition>Eyeliner products regardless of texture or formular</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Eyeliner products regardless of texture or formular</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -349,17 +490,15 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:altLabel xml:lang="en">Not including products for cheek, eye, and lip.</skos:altLabel>
-        <skos:definition xml:lang="en">Cosmetic products used for face area
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Cosmetic products used for face area</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Cosmetic products used for face area</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -384,9 +523,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition>brush for face application
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>brush for face application</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Face_Brush"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>brush for face application</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -394,17 +538,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
-        <skos:definition xml:lang="en">Any other tools used for applying cosmetics for face only that is not belonging to brush, sponges
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any other tools used for applying cosmetics for face only that is not belonging to brush, sponges</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any other tools used for applying cosmetics for face only that is not belonging to brush, sponges</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -412,21 +553,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Flawless_Finish_Sponges">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Sponges specificly used for finishing purpose
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Sponges specificly used for finishing purpose</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Flawless_Finish_Sponges"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Sponges specificly used for finishing purpose</owl:annotatedTarget>
+        <rdfs:isDefinedBy xml:lang="en">https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -434,10 +568,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
-        <skos:definition>foundation listed by formular
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation listed by formular</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation listed by formular</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -445,9 +583,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
-        <skos:definition>face foundation, includes all formular
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>face foundation, includes all formular</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>face foundation, includes all formular</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -455,33 +598,41 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Full_Coverage_Sponges">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Sponges specificly used for foundation purpose
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Sponges specificly used for foundation purpose</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Full_Coverage_Sponges"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Sponges specificly used for foundation purpose</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#GIORGIO_ARMANI_BEAUTY_My_Armani_To_Go_Essence-In-Foundation_Cushion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#GIORGIO_ARMANI_BEAUTY_My_Armani_To_Go_Essence-In-Foundation_Cushion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Italy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A next-generation makeup essential that takes care of your skin while diminishing the look of uneven texture, day after day.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#GIORGIO_ARMANI_BEAUTY_My_Armani_To_Go_Essence-In-Foundation_Cushion"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A next-generation makeup essential that takes care of your skin while diminishing the look of uneven texture, day after day.</owl:annotatedTarget>
+        <rdfs:comment>https://www.sephora.com/ca/en/product/my-armani-to-go-essence-in-foundation-cushion-P431406?icid2=products%20grid:p431406:product</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -489,58 +640,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
-        <skos:definition xml:lang="en">Any hair brush
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
-        <skos:definition xml:lang="en">Hair blowdry tool
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
-        <skos:definition xml:lang="en">Hair tools used for straight style
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
-        <skos:definition xml:lang="en">Any tools used for hairstyle only
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     </owl:Class>
     
 
@@ -549,15 +648,42 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Highlight_Sponges">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <skos:definition xml:lang="en">Sponges specificly used for highlight purpose</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Highlight_Sponges"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Sponges specificly used for highlight purpose</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#KAT_VON_D_Lock-It_Powder_Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#KAT_VON_D_Lock-It_Powder_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Sponges specificly used for highlight purpose
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SEPHORA_COLLECTION_Matte_Perfection_Powder_Foundation"/>
+        <skos:definition xml:lang="en">A vegan powder foundation that delivers full-coverage, instant blurring, and extreme long wear, in a sexy compact.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#KAT_VON_D_Lock-It_Powder_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A vegan powder foundation that delivers full-coverage, instant blurring, and extreme long wear, in a sexy compact.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/lock-it-powder-foundation-P441024?icid2=products%20grid:p441024:product</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -571,16 +697,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Cosmetic products used for lip area
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Cosmetic products used for lip area</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Cosmetic products used for lip area</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -588,10 +712,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lip balm regardless of color, size, texture and it is for repairing and moisturizing purpose
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any lip balm regardless of color, size, texture and it is for repairing and moisturizing purpose</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any lip balm regardless of color, size, texture and it is for repairing and moisturizing purpose</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -605,9 +733,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition>brush for lip application
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>brush for lip application</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>brush for lip application</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -615,19 +748,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lip gloss regardless of color, size, texture
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any lip gloss regardless of color, size, texture</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lip liner regardless of color, size, texture
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any lip gloss regardless of color, size, texture</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -635,9 +763,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lip sets regardless of color, size, texture that have at least two products
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any lip sets regardless of color, size, texture that have at least two products</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any lip sets regardless of color, size, texture that have at least two products</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -645,9 +778,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lip stain regardless of color, size, texture
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any lip stain regardless of color, size, texture</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any lip stain regardless of color, size, texture</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -655,9 +793,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
-        <skos:definition xml:lang="en">Any lipstick regardless of color, size, texture
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any lipstick regardless of color, size, texture</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any lipstick regardless of color, size, texture</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -665,12 +808,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -679,40 +816,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
-        <skos:definition xml:lang="en">Empty boxs, bottles used to carry a small amount of cosmetics products
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     </owl:Class>
     
 
@@ -728,9 +831,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:altLabel xml:lang="en">may also known as accessories under makeup</skos:altLabel>
-        <skos:definition xml:lang="en">Application tools for cosmetics, not including cosmetics
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Application tools for cosmetics, not including cosmetics</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Application tools for cosmetics, not including cosmetics</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -738,33 +846,42 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <skos:definition>Mascara products regardless of the texture and formular</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Mascara products regardless of the texture and formular</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors -->
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#NARS_Velvet_Matte_Foundation_Stick -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
-        <skos:definition xml:lang="en">Only includes mirrors for makeup purpose, such as portable travel size mirrors or makeup desk mirros only. This does not include dressing mirrors.
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#NARS_Velvet_Matte_Foundation_Stick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Clay_Stick_Foundation"/>
+        <skos:definition xml:lang="en">A one-of-a-kind, versatile matte foundation stick with a built-in, Touch-Up Blender for allover coverage or touch-ups on-the-go.</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
-    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#NARS_Velvet_Matte_Foundation_Stick"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A one-of-a-kind, versatile matte foundation stick with a built-in, Touch-Up Blender for allover coverage or touch-ups on-the-go.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/velvet-matte-foundation-stick-P422223?icid2=products%20grid:p422223:product</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -772,18 +889,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -792,9 +897,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
-        <skos:definition>Primer, used for prior to foundation
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>Primer, used for prior to foundation</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Primer, used for prior to foundation</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -807,14 +917,94 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     
 
 
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SEPHORA_COLLECTION_Matte_Perfection_Powder_Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SEPHORA_COLLECTION_Matte_Perfection_Powder_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A creamy powder foundation, with weightless, buildable coverage, that flexes and moves with the skin, and has a natural-matte finish.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SEPHORA_COLLECTION_Matte_Perfection_Powder_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A creamy powder foundation, with weightless, buildable coverage, that flexes and moves with the skin, and has a natural-matte finish.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/matte-perfection-powder-foundation-P408606?icid2=products%20grid:p408606:product</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_Camera_Ready_BB_Cream_SPF_35 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_Camera_Ready_BB_Cream_SPF_35">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Natural"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A multitasking, tinted BB cream that merges makeup and skincare in one step.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_Camera_Ready_BB_Cream_SPF_35"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A multitasking, tinted BB cream that merges makeup and skincare in one step.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/camera-ready-bb-cream-spf-35-P300339?icid2=products%20grid:p300339:product</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_HALO_Hydrating_Perfecting_Powder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_HALO_Hydrating_Perfecting_Powder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Natural"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Amazonian_Clay_Full_Coverage_Airbrush_Foundation"/>
+        <skos:definition xml:lang="en">A long-wearing, luminous mineral powder foundation that delivers buildable coverage with a soft, satin finish in a range of skin-perfecting shades.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#SMASHBOX_HALO_Hydrating_Perfecting_Powder"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A long-wearing, luminous mineral powder foundation that delivers buildable coverage with a soft, satin finish in a range of skin-perfecting shades.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/halo-hydrating-perfecting-powder-P228100?icid2=products%20grid:p228100:product</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
-        <skos:definition>foundation listed by finish
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation listed by finish</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation listed by finish</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -830,9 +1020,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
-        <skos:definition>Products listed by skin type, noted one product may suit to more than one skin stype
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Products listed by skin type, noted one product may suit to more than one skin stype</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Products listed by skin type, noted one product may suit to more than one skin stype</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -857,9 +1052,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Any kind of sponges used for ficial purpose, it includs products of both applying cosmetics and facial cleaning.
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any kind of sponges used for ficial purpose, it includs products of both applying cosmetics and facial cleaning.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any kind of sponges used for ficial purpose, it includs products of both applying cosmetics and facial cleaning.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -867,13 +1067,55 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Formular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Amazonian_Clay_Full_Coverage_Airbrush_Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Amazonian_Clay_Full_Coverage_Airbrush_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSkinType"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A talc-free, 12-hour medium-coverage, weightless powder foundation.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Amazonian_Clay_Full_Coverage_Airbrush_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A talc-free, 12-hour medium-coverage, weightless powder foundation.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/amazonian-clay-airbrush-foundation-P380829?icid2=products%20grid:p380829:product</rdfs:isDefinedBy>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Clay_Stick_Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Clay_Stick_Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasCountryOfOrigins"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#isInFinishOf"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Matte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A creamy, vegan foundation stick that melts into skin to create comfortable coverage that lasts for up to 12 hours.</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#TARTE_Clay_Stick_Foundation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">A creamy, vegan foundation stick that melts into skin to create comfortable coverage that lasts for up to 12 hours.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/product/clay-stick-foundation-P419646?icid2=products%20grid:p419646:product</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -881,10 +1123,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
-        <skos:definition>moisturizer that combines hydrating skincare benefits and SPF
-
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>moisturizer that combines hydrating skincare benefits and SPF</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>moisturizer that combines hydrating skincare benefits and SPF</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -892,9 +1138,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
-        <skos:definition>shades for contouring and shades for highlighting
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>shades for contouring and shades for highlighting</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>shades for contouring and shades for highlighting</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -902,9 +1153,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
-        <skos:definition>Setting spray and powder used for finishing
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>Setting spray and powder used for finishing</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>Setting spray and powder used for finishing</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -918,9 +1174,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Any eyebrow tool, regardless of the matrials such as eletronic or plastics.
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition xml:lang="en">Any eyebrow tool, regardless of the matrials such as eletronic or plastics.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget xml:lang="en">Any eyebrow tool, regardless of the matrials such as eletronic or plastics.</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -943,9 +1204,7 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada"/>
     
 
 
@@ -997,9 +1256,25 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     
 
 
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1057,13 +1332,17 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1081,6 +1360,14 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     
 
 
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sensitive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sensitive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
@@ -1089,9 +1376,7 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
 
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK">
-        <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK"/>
     
 
 
@@ -1111,46 +1396,60 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination">
-        <skos:definition>Suitable for skin type of combination skin - between dry and oily
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream">
-        <skos:definition>foundation texture in cream
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in cream</skos:definition>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry">
-        <skos:definition>Suitable for skin type of dry
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in cream</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel">
-        <skos:definition>foundation texture in gel
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in gel</skos:definition>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in gel</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid">
-        <skos:definition>foundation texture in liquid
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in liquid</skos:definition>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in liquid</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder">
-        <skos:definition>foundation texture in loose powder
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in loose powder</skos:definition>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal">
-        <skos:definition>Suitable for skin type of normal skin
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily">
-        <skos:definition>Suitable for skin type of oily
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
-    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in loose powder</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder">
-        <skos:definition>foundation texture in pressed powder
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in pressed powder</skos:definition>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in pressed powder</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick">
-        <skos:definition>foundation texture in stick
-sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
+        <skos:definition>foundation texture in stick</skos:definition>
     </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>foundation texture in stick</owl:annotatedTarget>
+        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
+    </owl:Axiom>
     
 
 
@@ -1162,24 +1461,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Tools"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Combination"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Normal"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Oily"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -1200,46 +1481,6 @@ sources: https://www.sephora.com/ca/en/shop/makeup-cosmetics</skos:definition>
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Curling_Iron"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Brush"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Dryer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Hair_Straighteners"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_PrimerMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#False_EyelashesMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeuo_Travel_Box"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Mirrors"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_LinerMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
