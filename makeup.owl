@@ -12,7 +12,10 @@
         <license>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. 
 
 &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot;&gt;&lt;img alt=&quot;Creative Commons Licence&quot; style=&quot;border-width:0&quot; src=&quot;https://i.creativecommons.org/l/by-nc/4.0/88x31.png&quot; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot;&gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;.</license>
+        <owl:priorVersion xml:lang="en">v1-terms and objective properties created
+v2-updated description &amp; sources</owl:priorVersion>
         <skos:definition>Sephora makeup product list, retrevied from https://www.sephora.com/ca/en/ Noted the content may have been changed for the purpose of this project.</skos:definition>
+        <owl:priorVersion xml:lang="en">An ontology of Sephora makeup product lists</owl:priorVersion>
         <rdfs:comment xml:lang="en">A makeup ontology that describes makeup products</rdfs:comment>
         <Contributor>Lokiy Wang</Contributor>
     </owl:Ontology>
@@ -33,6 +36,12 @@
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contributor -->
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contributor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#description"/>
     
 
 
@@ -90,8 +99,8 @@ Note: each product can only has one country of origins. So this is functional.</
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#hasSameFuncationwith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Tools"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Brush"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
         <skos:definition xml:lang="en">Some makeup tools may perform similar funcation and used with the same type of products. For example, face brush and sponge are both used for applying facial makeup such as foundations. So those two products have a relationship of symmetric through related to each other by the same type of property.</skos:definition>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -270,6 +279,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <rdfs:label xml:lang="en">Eye Concealer</rdfs:label>
         <skos:definition>Concealer that brightens the under-eyes</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -418,6 +428,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <rdfs:label xml:lang="en">Eye Sets</rdfs:label>
         <skos:definition>Eye products in a set that is including at least two or more products.</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -433,6 +444,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <rdfs:label xml:lang="en">Eyebrow</rdfs:label>
         <skos:definition>Eyebrow products such as eyebrow pencil etc.</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -448,6 +460,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eyelash_Curler">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Facial_Accessories"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Tweezers_&amp;_Eyebrow_Tools"/>
         <skos:definition xml:lang="en">Any eyelash curler, regardless of the matrials such as eletronic or plastics.</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -463,6 +476,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <rdfs:label xml:lang="en">Eyeliner</rdfs:label>
         <skos:definition>Eyeliner products regardless of texture or formular</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -583,6 +597,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <rdfs:label xml:lang="en">Foundation</rdfs:label>
         <skos:definition>face foundation, includes all formular</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -712,6 +727,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <rdfs:label xml:lang="en">Lip Balm</rdfs:label>
         <skos:definition xml:lang="en">Any lip balm regardless of color, size, texture and it is for repairing and moisturizing purpose</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -748,6 +764,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <rdfs:label xml:lang="en">Lip Gloss</rdfs:label>
         <skos:definition xml:lang="en">Any lip gloss regardless of color, size, texture</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -763,6 +780,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <rdfs:label xml:lang="en">Lip Sets</rdfs:label>
         <skos:definition xml:lang="en">Any lip sets regardless of color, size, texture that have at least two products</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -778,6 +796,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <rdfs:label xml:lang="en">Lip Stain</rdfs:label>
         <skos:definition xml:lang="en">Any lip stain regardless of color, size, texture</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -793,6 +812,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        <rdfs:label xml:lang="en">Lipsticks</rdfs:label>
         <skos:definition xml:lang="en">Any lipstick regardless of color, size, texture</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -830,7 +850,8 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
                 <owl:hasValue rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#China"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:altLabel xml:lang="en">may also known as accessories under makeup</skos:altLabel>
+        <rdfs:comment xml:lang="en">This cataglory also includes replacements parts for cosmetics</rdfs:comment>
+        <skos:altLabel xml:lang="en">Makeup Accessories</skos:altLabel>
         <skos:definition xml:lang="en">Application tools for cosmetics, not including cosmetics</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -846,6 +867,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+        <rdfs:label xml:lang="en">Mascara</rdfs:label>
         <skos:definition>Mascara products regardless of the texture and formular</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -897,6 +919,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <rdfs:label xml:lang="en">Primer</rdfs:label>
         <skos:definition>Primer, used for prior to foundation</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -997,6 +1020,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Select_Foundations_by_Finish">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
+        <skos:altLabel xml:lang="en">Foundation by Finish</skos:altLabel>
         <skos:definition>foundation listed by finish</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -1020,6 +1044,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sephora"/>
+        <rdfs:comment xml:lang="en">One product may be suitble for more than one skin type, the suitable skin type is provided by the manufature.</rdfs:comment>
         <skos:definition xml:lang="en">Products listed by skin type, noted one product may suit to more than one skin stype</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -1123,6 +1148,7 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <rdfs:label xml:lang="en">BB &amp; CC Cream</rdfs:label>
         <skos:definition>moisturizer that combines hydrating skincare benefits and SPF</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -1138,6 +1164,8 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <rdfs:label xml:lang="en">Face Contour &amp; Highlighter</rdfs:label>
+        <skos:altLabel xml:lang="en">Blush &amp; Bronzer</skos:altLabel>
         <skos:definition>shades for contouring and shades for highlighting</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -1153,6 +1181,8 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
 
     <owl:Class rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+        <rdfs:label xml:lang="en">Setting Spray &amp; Powder</rdfs:label>
+        <skos:altLabel xml:lang="en">Makeup Finishing Product</skos:altLabel>
         <skos:definition>Setting spray and powder used for finishing</skos:definition>
     </owl:Class>
     <owl:Axiom>
@@ -1196,18 +1226,6 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Benefits -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Benefits"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Canada"/>
-    
-
-
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#China -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#China">
@@ -1224,35 +1242,11 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Diro -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Diro"/>
-    
-
-
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Dry">
         <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Skin_Type"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Estte_Lauder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Estte_Lauder"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Europe -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Europe"/>
     
 
 
@@ -1264,53 +1258,11 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
-    
-
-
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Italy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Italy">
         <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Japan -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Japan"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Korea -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Korea"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lancome -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lancome"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Forever -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Makeup_Forever"/>
     
 
 
@@ -1346,12 +1298,6 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
-    
-
-
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Radiant -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Radiant">
@@ -1368,88 +1314,11 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     
 
 
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
-    
-
-
-    <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#UK"/>
-    
-
-
     <!-- http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#US">
         <rdf:type rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Country"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream">
-        <skos:definition>foundation texture in cream</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Cream"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in cream</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel">
-        <skos:definition>foundation texture in gel</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Gel"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in gel</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid">
-        <skos:definition>foundation texture in liquid</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Liquid"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in liquid</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder">
-        <skos:definition>foundation texture in loose powder</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in loose powder</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder">
-        <skos:definition>foundation texture in pressed powder</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in pressed powder</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
-    <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick">
-        <skos:definition>foundation texture in stick</skos:definition>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget>foundation texture in stick</owl:annotatedTarget>
-        <rdfs:isDefinedBy>https://www.sephora.com/ca/en/shop/makeup-cosmetics</rdfs:isDefinedBy>
-    </owl:Axiom>
     
 
 
@@ -1464,12 +1333,21 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Blender_Sponges"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Flawless_Finish_Sponges"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Full_Coverage_Sponges"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Highlight_Sponges"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Sponges"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#ConcealerMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FoundationMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#PrimerMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#BB&amp;CC_CreamMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Contour_&amp;_HighlighterMakeup_Product"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Setting_Spray_&amp;_PowderMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_SetsMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyebrowMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyelinerMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#MascaraMakeup_Product"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1481,6 +1359,33 @@ Makeup tools is used for applying cosmetics. Cosmetics is used with makeup tools
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Loose_Powder"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Press_Powder"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Stick"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#EyeMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#FaceMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Eye_Brush"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Face_Brush"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_Brush"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_BalmMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_GlossMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_SetsMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#Lip_StainMakeup_Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lokiy/ontologies/makeup.owl#LipsticksMakeup_Product"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
